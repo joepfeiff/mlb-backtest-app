@@ -1,3 +1,6 @@
+import pkg_resources
+installed_packages = [pkg.key for pkg in pkg_resources.working_set]
+st.write("Installed packages:", installed_packages)
 import streamlit as st
 import pandas as pd
 import json
