@@ -1,10 +1,7 @@
-import pkg_resources
-installed_packages = [pkg.key for pkg in pkg_resources.working_set]
-st.write("Installed packages:", installed_packages)
 import streamlit as st
 import pandas as pd
 import json
-from espn_api.base import ESPN
+from espn_api import ESPN  # Fixed import here
 
 @st.cache_data(show_spinner=False)
 def fetch_scoreboard():
